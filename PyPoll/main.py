@@ -1,12 +1,9 @@
 import os
 import csv
-import pandas as pd
 
 csvpath = os.path.join("..","Resources","election_data.csv")
 
 votes = 0
-candidateA = ""
-candidateB = ""
 candidates=[]
 listcand=[]
 countcand = 0
@@ -25,20 +22,16 @@ with open(csvpath) as csvfile:
 
             candidates.append(row[2])
 
-        df = csvreader
-
-        name = pd.Names(row[2]) 
-
-print(name)
-
-        
-            
-
                 
-           
-print(listcand)
-print(candidates)
+
 print("Election Results")
 print("-------------------------")
 print (f"Total Votes: {votes}")
 print("-------------------------")
+print (f"Candidates: {candidates}")
+
+print("Election Results", file=open("Results_PyRoll.txt", "a"))
+print("-------------------------", file=open("Results_PyRoll.txt", "a"))
+print (f"Total Votes: {votes}", file=open("Results_PyRoll.txt", "a"))
+print("-------------------------", file=open("Results_PyRoll.txt", "a"))
+print (f"Candidates: {candidates}", file=open("Results_PyRoll.txt", "a"))
