@@ -76,8 +76,14 @@ with open(csvpath) as csvfile:
     #Math the average change of the entire period
     diffavg = difftotal / countavg
 
-    print(f"Total Months: {count}", file=open("Results.txt", "a"))
-    print(f"Total: $ {money}", file=open("Results.txt", "a"))
-    print(f"Average Change: $ {float(diffavg)}", file=open("Results.txt", "a"))
-    print(f"Greatest Increase in Profits: {fecmax}, $ {maxval}", file=open("Results.txt", "a"))
-    print(f"Greatest Decrease in Profits: {fecmin}, $ {minval}", file=open("Results.txt", "a"))
+    print(f"Total Months: {count}")
+    print(f"Total: $ {money}")
+    print(f"Average Change: $ {float(diffavg)}")
+    print(f"Greatest Increase in Profits: {fecmax}, $ {maxval}")
+    print(f"Greatest Decrease in Profits: {fecmin}, $ {minval}")
+
+    print(f"Total Months: {count}", file=open("Results_PyBank.txt", "a"))
+    print(f"Total: $ {money}", file=open("Results_PyBank.txt", "a"))
+    print(f"Average Change: $ {float(diffavg)}", file=open("Results_PyBank.txt", "a"))
+    print(f"Greatest Increase in Profits: {fecmax}, $ {maxval}", file=open("Results_PyBank.txt", "a"))
+    print(f"Greatest Decrease in Profits: {fecmin}, $ {minval}", file=open("Results_PyBank.txt", "a"))
